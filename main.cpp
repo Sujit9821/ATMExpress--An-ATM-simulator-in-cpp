@@ -1,4 +1,4 @@
-//Project: C++ ATM Program
+//Project: ATMExpress--An-ATM-simulator-in-cpp
 #include <iostream>
 #include <iomanip>
 #include <stdlib.h>
@@ -77,7 +77,7 @@ char ast;
 					system("cls");
 					showLogo();
 					cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 WITHDRAWAL TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-					cout << "\n\n\t\t\t [ 1 ] From Checking" << endl;
+					cout << "\n\n\t\t\t [ 1 ] From Current" << endl;
 					cout << "\t\t\t [ 2 ] From Savings" << endl;
 					cout << "\t\t\t [ 3 ] Quick Cash" << endl;
 					cout << "\t\t\t [ 4 ] Back to Main Menu" << endl;
@@ -104,17 +104,16 @@ char ast;
 							system("cls");
 							showLogo();
 							cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 QUICK CASH TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-							cout << "\n\n\t\t\t REMAINING BALANCE : Php 10000"<<endl;
-							cout << "\n\t\t\t Enter the Amount (Php) : ";
+							cout << "\n\n\t\t\t REMAINING BALANCE : Rs. 10000"<<endl;
+							cout << "\n\t\t\t Enter the Amount (Rs.) : ";
 							cin >> amount1;
-							cout << "\n\t\t\t Your remaining quick cash balance: Php "<<10000 - amount1<<endl;
+							cout << "\n\t\t\t Your remaining quick cash balance: Rs. "<<10000 - amount1<<endl;
 							waiting(3000);
 							receipt();
 						cout << "\n\t\t\t|TRANSACTION:\t\t    QUICK WITHDRAWAL  |"
 						 	 << "\n\t\t\t|AMOUNT:\t\t    "<<amount1<<".00\t      |"
 						 	 << "\n\t\t\t|CURRENT BAL:\t\t    "<<20000 - amount1<<".00\t      |"
 							 << "\n\t\t\t|AVAILABLE BAL:\t\t    "<<20000 - amount1<<".00\t      |"
-							 << "\n\t\t\t|\t\t\t\t\t      |\n\t\t\t|HUWAG IPAALAM ANG PIN SA IBA.\t\t      |"
 							 << "\n\t\t\t|\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2|";
 							waiting(10000);
 							showMenu();
@@ -125,10 +124,10 @@ char ast;
 							system("cls");
 							showLogo();
 							cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 CASH SAVINGS TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-							cout << "\n\n\t\t\t AVAILABLE BALANCE : Php 10000" << endl;
+							cout << "\n\n\t\t\t AVAILABLE BALANCE : Rs. 10000" << endl;
 							cout << "\t\t\t Enter the amount : ";
 							cin >> amount2;
-							cout << "\t\t\t Your remaining savings balance: Php "<<10000 - amount2<<endl;
+							cout << "\t\t\t Your remaining savings balance: Rs. "<<10000 - amount2<<endl;
 							waiting(5000);
 							system("cls");
 							receipt();
@@ -136,10 +135,9 @@ char ast;
 						 	 << "\n\t\t\t|AMOUNT:\t\t    "<<amount2<<".00\t      |"
 						 	 << "\n\t\t\t|CURRENT BAL:\t\t    "<<20000 - amount2<<".00\t      |"
 							 << "\n\t\t\t|AVAILABLE BAL:\t\t    "<<20000 - amount2<<".00\t      |"
-							 << "\n\t\t\t|\t\t\t\t\t      |\n\t\t\t|HUWAG IPAALAM ANG PIN SA IBA.\t\t      |"
 							 << "\n\t\t\t|\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2|";
 							waiting(10000);
-							//brought to you by code-projects.org
+							
 							showMenu();
 						}
 						else if (withdrawChoice == 1)
@@ -148,10 +146,10 @@ char ast;
 							system("cls");
 							showLogo();
 							cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 CASH CHECKING TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-							cout << "\n\n\t\t\t AVAILABLE BALANCE : Php 20000" << endl;
+							cout << "\n\n\t\t\t AVAILABLE BALANCE : Rs. 20000" << endl;
 							cout << "\t\t\t Enter the amount : ";
 							cin >> amount3;
-							cout << "\t\t\t Your remaining check balance: Php "<<20000 - amount3<<endl;
+							cout << "\t\t\t Your remaining Current balance: Rs. "<<20000 - amount3<<endl;
 							waiting(3000);
 							system("cls");
 							receipt();
@@ -159,7 +157,6 @@ char ast;
 						 	 << "\n\t\t\t|AMOUNT:\t\t    "<<amount3<<".00\t      |"
 						 	 << "\n\t\t\t|CURRENT BAL:\t\t    "<<20000 - amount3<<".00\t      |"
 							 << "\n\t\t\t|AVAILABLE BAL:\t\t    "<<20000 - amount3<<".00\t      |"
-							 << "\n\t\t\t|\t\t\t\t\t      |\n\t\t\t|HUWAG IPAALAM ANG PIN SA IBA.\t\t      |"
 							 << "\n\t\t\t|\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2|";
 							waiting(10000);
 							showMenu();							
@@ -194,9 +191,9 @@ char ast;
 							system("cls");
 							showLogo();
 							cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 SAVINGS DEPOSIT TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-							cout << "\n\n\t\t\t Enter the deposit amount : Php ";
+							cout << "\n\n\t\t\t Enter the deposit amount : Rs. ";
 							cin >> depamount1;
-							cout << "\t\t\t Your New Balance: Php "<<depamount1+10000<<endl;
+							cout << "\t\t\t Your New Balance: Rs. "<<depamount1+10000<<endl;
 							waiting(5000);
 							system("cls");
 							showMenu();						
@@ -208,9 +205,9 @@ char ast;
 							system("cls");
 							showLogo();
 							cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 CHECK DEPOSIT TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-							cout << "\n\n\t\t\t Enter the deposit amount : Php ";
+							cout << "\n\n\t\t\t Enter the deposit amount : Rs. ";
 							cin >> depamount2;
-							cout << "\t\t\t Your New Balance: Php "<<depamount2+20000<<endl;
+							cout << "\t\t\t Your New Balance: Rs. "<<depamount2+20000<<endl;
 							waiting(5000);
 							system("cls");
 							showMenu();						
@@ -221,7 +218,7 @@ char ast;
 						system("cls");
 						showLogo();
 						cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 CHECK BALANCE TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-						cout << "\n\n\t\t\t [ 1 ] From Checking" << endl;
+						cout << "\n\n\t\t\t [ 1 ] From Current" << endl;
 						cout << "\t\t\t [ 2 ] From Savings" << endl;
 						cout << "\t\t\t [ 3 ] Back to Main Menu" << endl;
 						cout << "\t\t\t _____________________________________________"<<endl;
@@ -244,7 +241,7 @@ char ast;
 							system("cls");
 							showLogo();
 							cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 BALANCE SAVINGS TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-							cout << "\n\n\t\t\t NEW AVAILABLE BALANCE : Php 10000";
+							cout << "\n\n\t\t\t NEW AVAILABLE BALANCE : Rs. 10000";
 							waiting(3000);
 							showMenu();
 						}
@@ -253,7 +250,7 @@ char ast;
 							system("cls");
 							showLogo();
 							cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 BALANCE CHECK TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-							cout << "\n\n\t\t\t NEW CHECK BALANCE : Php 20000";
+							cout << "\n\n\t\t\t NEW CHECK BALANCE : Rs. 20000";
 							waiting(3000);
 							showMenu();
 						}
@@ -263,8 +260,8 @@ char ast;
 						system("cls");
 						showLogo();
 						cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 FUND TRANSFER TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-						cout << "\n\n\t\t\t [ 1 ] Transfer from Savings to Checking" << endl;
-						cout << "\t\t\t [ 2 ] Transfer from Checking to Savings" << endl;
+						cout << "\n\n\t\t\t [ 1 ] Transfer from Savings to Current" << endl;
+						cout << "\t\t\t [ 2 ] Transfer from Current to Savings" << endl;
 						cout << "\t\t\t [ 3 ] Back to Main Menu" << endl;
 						cout << "\t\t\t _____________________________________________"<<endl;
 						cout << "\t\t\t Enter Your Funds Transfer Transaction: ";
@@ -287,12 +284,12 @@ char ast;
 							system("cls");
 							showLogo();
 							cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 CHECK TRANSFER TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-							cout << "\n\n\t\t\t NEW CHECK BALANCE : Php 20000";
+							cout << "\n\n\t\t\t NEW CHECK BALANCE : Rs. 20000";
 							cout << "\n\t\t\t Account Number (for Transfer) : ";
 							cin >> accntNo;
 							cout << "\n\t\t\t Check Number : ";
 							cin >> checkNo;
-							cout << "\n\t\t\t Amount Transfer : Php ";
+							cout << "\n\t\t\t Amount Transfer : Rs. ";
 							cin >> amntNo;
 							while (amntNo < 2000 || amntNo > 20000)
 							{
@@ -300,12 +297,12 @@ char ast;
 								showLogo();
 								cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 CHECK TRANSFER TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2";
 								cout << "\n\n\t\t\t Invalid Amount!\n\t\t\t Please try again!";
-								cout << "\n\t\t\t Please enter Amount Transfer : Php ";
+								cout << "\n\t\t\t Please enter Amount Transfer : Rs. ";
 								cin >> amntNo;
 								
 							}
 							waiting(1000);
-							cout << "\n\n\t\t\t The amount of Php "<<amntNo<<" has been transfered to \n\t\t\t "<<accntNo<<" with a check # "<<checkNo<<endl;
+							cout << "\n\n\t\t\t The amount of Rs. "<<amntNo<<" has been transfered to \n\t\t\t "<<accntNo<<" with a check # "<<checkNo<<endl;
 							waiting(10000);
 							showMenu();
 						}
@@ -315,10 +312,10 @@ char ast;
 							system("cls");
 							showLogo();
 							cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 SAVINGS TRANSFER TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2";
-							cout << "\n\n\t\t\t NEW SAVINGS BALANCE : Php 10000";
+							cout << "\n\n\t\t\t NEW SAVINGS BALANCE : Rs. 10000";
 							cout << "\n\t\t\t Account Number (for Transfer) : ";
 							cin >> accntNo;
-							cout << "\n\t\t\t Amount Transfer : Php ";
+							cout << "\n\t\t\t Amount Transfer : Rs. ";
 							cin >> amntNo;
 							while (amntNo < 2000 || amntNo > 10000)
 							{
@@ -326,19 +323,19 @@ char ast;
 								showLogo();
 								cout << endl <<" \t\t\t \xB2\xB2\xB2\xB2\xB2\xB2\xB2\xB2 SAVINGS TRANSFER TRANSACTION \xB2\xB2\xB2\xB2\xB2\xB2\xB2";
 								cout << "\n\n\t\t\t Invalid Amount!\n\t\t\t Please try again!";
-								cout << "\n\t\t\t Please enter Amount Transfer : Php ";
+								cout << "\n\t\t\t Please enter Amount Transfer : Rs. ";
 								cin >> amntNo;
 								
 							}
 							waiting(1000);
-							cout << "\n\n\t\t\t The amount of Php "<<amntNo<<" has been transfered to "<<accntNo;
+							cout << "\n\n\t\t\t The amount of Rs. "<<amntNo<<" has been transfered to "<<accntNo;
 							waiting(10000);
 							showMenu();
 						}
 			}		
 			else if (choice ==5)
 			{
-						cout << " \n\t\t\t Brought To You By code-projects.org" << endl << endl;
+						cout << " \n\t\t\t THANK YOU!" << endl << endl;
 						getch();
 			}
 		} while (choice != 5);
@@ -408,7 +405,7 @@ char ast;
 				 << "\n\t\t\t|\t\t\t\t\t      |"
 				 << "\n\t\t\t|DATE:\t\t\t    "<<date<<"\t      |"
 				 << "\n\t\t\t|TIME:\t\t\t    "<<time<<"\t      |"
-				 << "\n\t\t\t|LOCATION:\t\t    MASBATE \t      |"
+				 << "\n\t\t\t|LOCATION:\t\t    DELHI \t      |"
 				 << "\n\t\t\t|CARD NUM:\t\t    ************1215  |";
 	}
 			
